@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Partner.io</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+  <div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+      <div class="cover-container">
+
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">Partner.io</h3>
+            <ul class="nav masthead-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="app">
+
+        <div class="content"></div>
+
+        </div>
+        <script type='text/template' id="business-search-template">
+          <p class="logged-in">Signed in as <%= Parse.User.current().get("username") %>   (<a href="#" id="logout">Log Out</a>)</p>
+          <p class="lead">Enter the name of a company you potentially want to partner with. Partner.io will then scour the web for information about them.</p>
+          <form id="businessform" name="businessform" class="form-inline">
+            <div class="form-group">
+              <input type="text" class="search form-control" id="s" name="s" placeholder="ex: HubSpot">
+              <button class="btn btn-default" id="search">Search</button>
+              <button id="remove" class="btn btn-default">Remove</button>
+            </div>
+          </form>
+          <div id="crunchbase"></div>
+          <div id="custom-search"></div>
+          <div id="klout"></div>
+        </script>
+
+        <script type="text/template" id="business-data-template"></script>
+    
+        <script type="text/template" id="login-template">
+        <div class="inner cover">
+            <h1 class="cover-heading">Find your next partner.</h1>
+            <p class="lead">Partner.io makes finding the next great partner for your business a breeze. Find overviews, products, funding, and even business contacts to keep BD prospecting simple.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default sign-up">Sign Up</a> or <a href="#" class="btn btn-lg btn-default log-in">Log In</a>
+            </p>
+        </div>
+        <header id="header"></header>
+          <div class="login">
+            <form class="signup-form form-inline">
+              <h2>Sign Up</h2>
+              <div class="error" style="display:none"></div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="signup-username" placeholder="Username" />
+                </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="signup-password" placeholder="Password" />
+                <button class="btn btn-default">Sign Up</button>
+              </div>
+            </form>
+
+            <form class="login-form form-inline">
+              <h2>Log In</h2>
+              <div class="form-group">
+                <div class="error" style="display:none"></div>
+                <input type="text" class="form-control" id="login-username" placeholder="Username" />
+                <input type="password" class="form-control" id="login-password" placeholder="Password" />
+                <button class="btn btn-default">Log In</button>
+              </div>
+            </form>
+          </div>
+        </script>
+
+
+        <div class="mastfoot">
+            <div class="inner">
+              <p>A side-hustle of <a href="https://twitter.com/mattschnitt">@mattschnitt</a>.</p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="js/underscore-1.1.6.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.2.13.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>
